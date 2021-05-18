@@ -18,16 +18,16 @@ jobs:
         Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/ngrok.exe -OutFile ngrok.exe
         Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/nssm.exe -OutFile nssm.exe
         Invoke-WebRequest https://github.com/Jonh6969/dltools/raw/main/7z1900-x64.exe -OutFile 7z1900-x64.exe
-        Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/https://github.com/Jonh6969/dltools/raw/main/JDownloader2Setup_win_x64_incl_jre1_8.exe -OutFile JDownloader2Setup_win_x64_incl_jre1_8.exe
+        Invoke-WebRequest https://github.com/Jonh6969/dltools/raw/main/JDownloader2Setup_win_x64_incl_jre1_8.exe -OutFile JDownloader2Setup_win_x64_incl_jre1_8.exe
         Invoke-WebRequest https://github.com/Jonh6969/dltools/raw/main/Air%20Explorer%20Pro%204.0.1%20Portable-RSLOAD.NET-.7z -OutFile Air_Explorer_Pro.7z
     - name: Copy NSSM & Ngrok to Windows Directory.
 
       run: | 
         copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
-        copy 7z1900-x64.exe C:\Windows
-        copy JDownloader2Setup_win_x64_incl_jre1_8.exe C:\Windows
-        copy Air_Explorer_Pro.7z C:\Windows
+        copy 7z1900-x64.exe C:\Users\administrator\downloads
+        copy JDownloader2Setup_win_x64_incl_jre1_8.exe C:\Users\administrator\downloads
+        copy Air_Explorer_Pro.7z C:\Users\administrator\downloads
     - name: Connect your NGROK account
 
       run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
