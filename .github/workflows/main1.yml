@@ -28,7 +28,6 @@ jobs:
         copy 7z1900-x64.exe C:\Windows
         copy JDownloader2Setup_win_x64_incl_jre1_8.exe C:\Windows
         copy Air_Explorer_Pro.7z C:\Windows
-	
     - name: Connect your NGROK account
 
       run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
